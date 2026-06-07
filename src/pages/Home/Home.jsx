@@ -12,8 +12,8 @@ export default function Home() {
       <HelpCards />
       <WhenToAct />
       <Process />
-      <GroupProgram />
-      <IndividualProgram />
+      {/* <GroupProgram /> */}
+      {/* <IndividualProgram /> */}
     </>
   )
 }

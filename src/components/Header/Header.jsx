@@ -30,9 +30,9 @@ export default function Header() {
             Главная
           </NavLink>
 
-          <NavLink to="/articles" className={styles.link} onClick={() => setOpen(false)}>
+          {/* <NavLink to="/articles" className={styles.link} onClick={() => setOpen(false)}>
             Статьи
-          </NavLink>
+          </NavLink>*/}
 
           <NavLink to="/consultations" className={styles.link} onClick={() => setOpen(false)}>
             Консультации

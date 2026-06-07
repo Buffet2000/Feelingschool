@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <>
       <About />
+      <Process />
       {/*<Hero />
       <HelpCards />
-      <WhenToAct />
       <Process />*/}
       {/* <GroupProgram /> */}
       {/* <IndividualProgram /> */}

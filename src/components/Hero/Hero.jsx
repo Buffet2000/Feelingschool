@@ -33,7 +33,7 @@ export default function Hero() {
               трудностями
             </p>
 
-            <a className={styles.btn} href="#booking">
+            <a className={styles.btn} href="/consultations">
               Записаться на консультацию
             </a>
           </div>

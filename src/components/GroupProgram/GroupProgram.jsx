@@ -72,7 +72,7 @@ export default function GroupProgram() {
               </div>
 
               <div className={styles.actionsLeft}>
-                <a className={styles.btn} href="#booking">
+                <a className={styles.btn} href="/consultations">
                   Записаться на консультацию
                 </a>
                 <p className={styles.hint}>Расскажите возраст ребёнка — подберём формат группы.</p>

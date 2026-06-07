@@ -1,5 +1,6 @@
 import styles from './About.module.css'
 import photoFallback from '../../assets/images/blocks/My-photo.jpg'
+import { Link, NavLink } from 'react-router-dom'
 
 const about = {
   name: 'Виктория Деордиева',
@@ -170,6 +171,9 @@ export default function About() {
               Работа строится бережно и индивидуально — с учётом возраста ребёнка,
               особенностей развития и запроса семьи.
             </div>
+            <Link to="/consultations" className={styles.cardButton}>
+              Перейти к консультациям
+            </Link>
           </article>
         </div>
 

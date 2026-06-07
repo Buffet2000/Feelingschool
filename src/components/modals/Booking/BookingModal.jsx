@@ -7,7 +7,6 @@ const initial = {
   contact: '',
   childAge: '',
   format: 'online',
-  city: '',
   time: '',
   message: '',
 }
@@ -18,7 +17,7 @@ export default function BookingModal({ open, onClose, serviceId, serviceTitle })
 
   const fields = useMemo(() => {
     if (serviceId === 'group') {
-      return ['name', 'contact', 'childAge', 'format', 'city', 'time', 'message']
+      return ['name', 'contact', 'childAge', 'format', 'time', 'message']
     }
 
     if (serviceId === 'parents') {
@@ -153,17 +152,6 @@ export default function BookingModal({ open, onClose, serviceId, serviceTitle })
                 <option value="online">Онлайн</option>
                 <option value="offline">Офлайн</option>
               </select>
-            </label>
-          )}
-
-          {fields.includes('city') && (
-            <label className={styles.field}>
-              <span>Город / место проведения</span>
-              <input
-                value={form.city}
-                onChange={set('city')}
-                placeholder="например, Helsinki"
-              />
             </label>
           )}
 

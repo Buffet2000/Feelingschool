@@ -40,7 +40,7 @@ export default function WhenToAct() {
             </ul>
 
             <div className={styles.actions}>
-              <a className={styles.btn} href="#booking">
+              <a className={styles.btn} href="/consultations">
                 Записаться на консультацию
               </a>
               <span className={styles.note}>

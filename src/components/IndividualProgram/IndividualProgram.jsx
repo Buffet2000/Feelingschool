@@ -53,7 +53,7 @@ export default function IndividualProgram() {
               </div>
 
               <div className={styles.actions}>
-                <a className={styles.btn} href="#booking">
+                <a className={styles.btn} href="/consultations">
                   Записаться на консультацию
                 </a>
                 <p className={styles.hint}>Подходит детям и подросткам с индивидуальными запросами.</p>

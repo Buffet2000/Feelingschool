@@ -28,34 +28,45 @@
   position: relative;
   overflow: hidden;
   border-radius: 22px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.18);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
-  background: #ffffff;
+
+  background-image: url('../../assets/images/backgrounds/background-vertical.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Мягкий фон (в стиле остальных блоков).
-   По умолчанию — лёгкая виньетка.
-   Если хочешь акварельный фон: раскомментируй style={{'--bg': `url(${bg})`}}
-   в компоненте и добавь background-image слоём. */
-.bg {
+.box::before {
+  content: "";
   position: absolute;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
-  background-image:
-    linear-gradient(0deg, rgba(255,255,255,0.70), rgba(255,255,255,0.95)),
-    var(--bg);
-  background-size: cover, cover;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
- 
+  pointer-events: none;
 
-  filter: saturate(0.95);
+  background:
+    radial-gradient(
+      circle at 45% 35%,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 255, 255, 0.80) 48%,
+      rgba(255, 255, 255, 0.64) 100%
+    ),
+    radial-gradient(
+      circle at 18% 88%,
+      rgba(58, 127, 109, 0.10),
+      transparent 55%
+    );
+}
+
+/* можно оставить .bg в JSX, но визуально он уже не нужен */
+.bg {
+  display: none;
 }
 
 .inner {
   position: relative;
   z-index: 1;
+
   padding: 28px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -91,8 +102,8 @@
   padding: 14px 14px;
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(58, 127, 109, 0.12);
   backdrop-filter: blur(6px);
 
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
@@ -109,6 +120,7 @@
   font-weight: 900;
   color: #2d6f5f;
   background: rgba(58, 127, 109, 0.14);
+  border: 1px solid rgba(58, 127, 109, 0.12);
 }
 
 .stepTitle {
@@ -118,7 +130,7 @@
 }
 
 .stepText {
-  color: #4a5b56;
+  color: #344844;
   font-size: 0.98rem;
   line-height: 1.55;
 }
@@ -129,8 +141,9 @@
   display: block;
 
   border-radius: 18px;
+  border: 1px solid rgba(58, 127, 109, 0.12);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  filter: saturate(0.95) contrast(0.98);
+  filter: saturate(0.96) contrast(0.98);
 }
 
 @media (max-width: 920px) {

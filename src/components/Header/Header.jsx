@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 
-import logo from '../../assets/logo/school-of-feelings.png'
+import logo from '../../assets/logo/LogoNew.png'
 import { useAuth } from '../Auth/UseAuth'
 
 export default function Header() {

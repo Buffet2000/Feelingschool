@@ -50,7 +50,7 @@ export default function Header() {
 
           <a
             className={styles.cta}
-            href="#booking"
+            href="/consultations"
             onClick={() => setOpen(false)}
           >
             Записаться

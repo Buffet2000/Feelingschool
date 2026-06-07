@@ -39,7 +39,7 @@ export default function Header() {
           </NavLink>
 
           <NavLink to="/about" className={styles.link} onClick={() => setOpen(false)}>
-            Обо мне
+            Информация о работе
           </NavLink>
 
           {!loading && isAuthed && (

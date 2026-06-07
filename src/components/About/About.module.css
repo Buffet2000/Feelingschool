@@ -7,9 +7,14 @@
   position: relative;
   overflow: hidden;
   border-radius: 22px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.18);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.10);
-  background: #fbfbfb;
+
+  background-image: url('../../assets/images/backgrounds/background-vertical.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 22px;
@@ -21,7 +26,20 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 12% 18%, rgba(58, 127, 109, 0.12), transparent 55%);
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at 42% 35%,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.78) 48%,
+      rgba(255, 255, 255, 0.62) 100%
+    ),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(58, 127, 109, 0.12),
+      transparent 55%
+    );
 }
 
 .heroLeft {
@@ -48,10 +66,10 @@
 
 .sublead {
   margin: 0 0 16px;
-  color: #4a5b56;
+  color: #344844;
   font-size: 1.03rem;
   line-height: 1.7;
-  max-width: 54ch;
+  max-width: 58ch;
 }
 
 /* stats */
@@ -64,8 +82,8 @@
 
 .stat {
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(58, 127, 109, 0.12);
+  background: rgba(255, 255, 255, 0.66);
   backdrop-filter: blur(6px);
   padding: 12px 12px;
 }
@@ -100,7 +118,7 @@
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.9rem;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.12);
 }
 
 .badge {
@@ -118,7 +136,7 @@
   width: min(360px, 100%);
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.14);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
@@ -149,11 +167,36 @@
   position: relative;
   overflow: hidden;
   border-radius: 22px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.18);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(6px);
+
+  background-image: url('../../assets/images/backgrounds/background-vertical.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   padding: 22px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at 46% 36%,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.78) 48%,
+      rgba(255, 255, 255, 0.62) 100%
+    );
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .title {
@@ -167,8 +210,9 @@
 /* education */
 .eduBlock {
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  background: rgba(251, 251, 251, 0.78);
+  border: 1px solid rgba(58, 127, 109, 0.12);
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(4px);
   padding: 14px;
   margin-bottom: 14px;
 }
@@ -180,15 +224,16 @@
 }
 
 .eduText {
-  color: #4a5b56;
+  color: #344844;
   line-height: 1.65;
 }
 
 /* details */
 .details {
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  background: rgba(251, 251, 251, 0.65);
+  border: 1px solid rgba(58, 127, 109, 0.12);
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(4px);
   padding: 12px;
 }
 
@@ -240,7 +285,7 @@
   padding: 14px;
   border-radius: 16px;
   background: rgba(58, 127, 109, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.10);
   color: #354743;
   line-height: 1.6;
 }
@@ -252,7 +297,7 @@
 
 .formatsHead {
   text-align: center;
-  margin: 18px 0 14px;
+  margin: 22px 0 14px;
 }
 
 .h2 {
@@ -278,12 +323,39 @@
 }
 
 .miniCard {
+  position: relative;
+  overflow: hidden;
   border-radius: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(58, 127, 109, 0.16);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(6px);
+
+  background-image: url('../../assets/images/backgrounds/background-vertical.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   padding: 16px;
+}
+
+.miniCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at 44% 34%,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.78) 52%,
+      rgba(255, 255, 255, 0.64) 100%
+    );
+}
+
+.miniCard > * {
+  position: relative;
+  z-index: 1;
 }
 
 .miniTitle {
@@ -293,7 +365,7 @@
 }
 
 .miniText {
-  color: #4a5b56;
+  color: #344844;
   line-height: 1.6;
 }
 
@@ -302,16 +374,39 @@
   .hero {
     grid-template-columns: 1fr;
   }
+
   .heroRight {
     justify-content: center;
   }
+
   .stats {
     grid-template-columns: 1fr;
   }
+
   .grid {
     grid-template-columns: 1fr;
   }
+
   .cards3 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 34px 0 12px;
+  }
+
+  .hero {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .sublead {
+    font-size: 0.98rem;
+  }
+
+  .photoCard {
+    width: 100%;
   }
 }

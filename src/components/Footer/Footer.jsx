@@ -17,9 +17,8 @@ export default function Footer() {
 
         <nav className={styles.menu}>
           <Link to="/" className={styles.link}>Главная</Link>
-          <Link to="/" className={styles.link}>Статьи</Link>
           <Link to="/consultations" className={styles.link}>Консультации</Link>
-          <Link to="/about" className={styles.link}>Обо мне</Link>
+          <Link to="/about" className={styles.link}>Информация о работе</Link>
         </nav>
 
         <div className={styles.media} aria-hidden="true">

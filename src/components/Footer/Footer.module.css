@@ -94,5 +94,6 @@
   .left {
     text-align: center;
     justify-items: center;
+    border-right: none;
   }
 }

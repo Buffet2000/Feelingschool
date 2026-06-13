@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import footerImg from '../../assets/images/blocks/footer-img2.png'
+import footerImg from '../../assets/images/blocks/footer-img2.webp'
 
 import { Link } from 'react-router-dom'
 

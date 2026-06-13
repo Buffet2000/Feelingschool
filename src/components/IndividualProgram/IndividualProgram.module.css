@@ -53,7 +53,7 @@
       rgba(255,255,255,0.58),
       rgba(255,255,255,0.65)
     ),
-    url("../../assets/images/backgrounds/backgroung-horizontal.png");
+    url("../../assets/images/backgrounds/backgroung-horizontal.webp");
 
   background-size: cover, cover;
   background-position: bottom, bottom;

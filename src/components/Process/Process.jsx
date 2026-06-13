@@ -1,7 +1,7 @@
 import styles from './Process.module.css'
-import processImg from '../../assets/images/process.png'
+import processImg from '../../assets/images/process.webp'
 
-import bg from '../../assets/images/backgrounds/backgroung-horizontal.png'
+import bg from '../../assets/images/backgrounds/backgroung-horizontal.webp'
 
 const steps = [
   { n: 1, title: 'Первичная консультация', text: 'Коротко знакомимся и уточняем запрос.' },

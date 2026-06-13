@@ -3,9 +3,9 @@ import styles from './Consultations.module.css'
 
 import BookingModal from '../modals/Booking/BookingModal'
 
-import freeImg from '../../assets/images/cards/free.png'
-import groupImg from '../../assets/images/cards/group.png'
-import individualImg from '../../assets/images/cards/individual.png'
+import freeImg from '../../assets/images/cards/parents.webp'
+import groupImg from '../../assets/images/cards/group.webp'
+import individualImg from '../../assets/images/cards/individual.webp'
 
 const cards = [
   {

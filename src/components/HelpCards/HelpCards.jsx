@@ -1,5 +1,5 @@
 import styles from './HelpCards.module.css'
-import individualImg from '../../assets/images/cards/individual.png'
+import individualImg from '../../assets/images/cards/individual.webp'
 
 const kids = [
   'тревожность, страхи, беспокойство',

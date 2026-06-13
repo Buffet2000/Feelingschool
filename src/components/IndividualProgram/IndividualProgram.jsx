@@ -1,6 +1,6 @@
 import styles from './IndividualProgram.module.css'
 
-import illu from '../../assets/images/blocks/individual-left.png'
+import illu from '../../assets/images/blocks/individual-left.webp'
 
 const process = ['первое занятие — диагностическое']
 

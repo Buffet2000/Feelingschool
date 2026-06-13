@@ -19,7 +19,6 @@ export default function Home() {
       <Process />
       {/* <Hero /> */}
       <HelpCards />
-      {/* <Process /> */}
       {/* <GroupProgram /> */}
       {/* <IndividualProgram /> */}
     </>

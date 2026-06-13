@@ -1,6 +1,6 @@
 import styles from './About.module.css'
 import photoFallback from '../../assets/images/blocks/My-photo.jpg'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const about = {
   name: 'Виктория Деордиева',
@@ -76,15 +76,7 @@ const methods = [
 ]
 
 export default function About() {
-  const {
-    name,
-    intro1,
-    intro2,
-    intro3,
-    stats,
-    badges,
-    formats,
-  } = about
+  const { name, intro1, intro2, intro3, stats, badges, formats } = about
 
   const avatarUrl = photoFallback
 
@@ -101,8 +93,8 @@ export default function About() {
             <p className={styles.sublead}>{intro3}</p>
 
             <div className={styles.stats}>
-              {stats.map((s, i) => (
-                <div key={i} className={styles.stat}>
+              {stats.map((s) => (
+                <div key={s.text} className={styles.stat}>
                   <div className={styles.statNum}>{s.num}</div>
                   <div className={styles.statText}>{s.text}</div>
                 </div>
@@ -120,7 +112,16 @@ export default function About() {
 
           <div className={styles.heroRight}>
             <div className={styles.photoCard}>
-              <img className={styles.photo} src={avatarUrl} alt={name} />
+              <img
+                className={styles.photo}
+                src={avatarUrl}
+                alt={`${name} — детский и подростковый психолог`}
+                width="960"
+                height="1280"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
         </header>
@@ -132,8 +133,10 @@ export default function About() {
             <div className={styles.eduBlock}>
               <div className={styles.eduTitle}>Основное образование</div>
               <div className={styles.eduText}>
-                Государственный университет Республики Молдова<br />
-                <b>Специальность:</b> Педагогика и психология<br />
+                Государственный университет Республики Молдова
+                <br />
+                <b>Специальность:</b> Педагогика и психология
+                <br />
                 <b>Год окончания:</b> 2009
               </div>
             </div>
@@ -171,6 +174,7 @@ export default function About() {
               Работа строится бережно и индивидуально — с учётом возраста ребёнка,
               особенностей развития и запроса семьи.
             </div>
+
             <Link to="/consultations" className={styles.cardButton}>
               Перейти к консультациям
             </Link>

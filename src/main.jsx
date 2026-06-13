@@ -5,14 +5,17 @@ import App from './App.jsx'
 import './styles/global.css'
 import { AuthProvider } from './components/Auth/AuthProvider.jsx'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <ScrollToTop />
-        <App />
-      </AuthProvider>
+      <HelmetProvider>
+        <AuthProvider>
+          <ScrollToTop />
+          <App />
+        </AuthProvider>
+      </HelmetProvider>
     </BrowserRouter>
   </StrictMode>
 )

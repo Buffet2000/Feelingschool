@@ -7,6 +7,11 @@ import { AuthProvider } from './components/Auth/AuthProvider.jsx'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 
+import '@fontsource/manrope/400.css'
+import '@fontsource/manrope/600.css'
+import '@fontsource/manrope/700.css'
+import '@fontsource/manrope/800.css'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

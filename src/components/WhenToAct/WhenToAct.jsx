@@ -1,6 +1,6 @@
 import styles from './WhenToAct.module.css'
 
-import img from '../../assets/images/blocks/when-to-act.png'
+import img from '../../assets/images/blocks/when-to-act.webp'
 
 export default function WhenToAct() {
   return (

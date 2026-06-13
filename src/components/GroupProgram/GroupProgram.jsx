@@ -1,5 +1,5 @@
 import styles from './GroupProgram.module.css'
-import bg from '../../assets/images/backgrounds/backgroung-horizontal.png'
+import bg from '../../assets/images/backgrounds/backgroung-horizontal.webp'
 
 const forWho = [
   'часто тревожатся и переживают',

@@ -1,7 +1,7 @@
 import styles from './Hero.module.css'
 
-import leftDecor from '../../assets/images/hero-left.png'
-import rightScene from '../../assets/images/hero-right.png'
+import leftDecor from '../../assets/images/hero-left.webp'
+import rightScene from '../../assets/images/hero-right.webp'
 
 export default function Hero() {
   return (

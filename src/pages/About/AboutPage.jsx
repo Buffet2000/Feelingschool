@@ -14,14 +14,14 @@ export default function About() {
           content="Как проходит работа с детским и подростковым психологом: подход, методы, опыт, образование и форматы поддержки детей, подростков и родителей."
         />
 
-        <link rel="canonical" href="https://feelingschool.org/about" />
+        <link rel="canonical" href="https://www.feelingschool.org/about" />
 
         <meta property="og:title" content="Информация о работе психолога | School of Feelings" />
         <meta
           property="og:description"
           content="Подход, методы, опыт и форматы работы с детьми, подростками и родителями. Бережная психологическая поддержка семьи."
         />
-        <meta property="og:url" content="https://feelingschool.org/about" />
+        <meta property="og:url" content="https://www.feelingschool.org/about" />
         <meta property="og:type" content="website" />
       </Helmet>
       <HelpCards />

@@ -39,7 +39,10 @@ export default function BookingModal({ open, onClose, serviceId, serviceTitle })
     }
 
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+
+    return () => {
+      window.removeEventListener('keydown', onKey)
+    }
   }, [open, onClose])
 
   useEffect(() => {
@@ -87,6 +90,7 @@ export default function BookingModal({ open, onClose, serviceId, serviceTitle })
       onMouseDown={onClose}
       role="dialog"
       aria-modal="true"
+      aria-label="Форма заявки"
     >
       <div className={styles.modal} onMouseDown={(e) => e.stopPropagation()}>
         <header className={styles.head}>
@@ -148,9 +152,13 @@ export default function BookingModal({ open, onClose, serviceId, serviceTitle })
           {fields.includes('format') && (
             <label className={styles.field}>
               <span>Формат</span>
-              <select value={form.format} onChange={set('format')}>
+              <select
+                className={styles.select}
+                value={form.format}
+                onChange={set('format')}
+              >
                 <option value="online">Онлайн</option>
-                <option value="offline">Офлайн</option>
+                <option value="offline">Очно в Каласатама</option>
               </select>
             </label>
           )}

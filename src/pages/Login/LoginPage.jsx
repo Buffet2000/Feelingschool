@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import styles from './LoginPage.module.css'
 import { supabase } from '../../lib/supabaseClient.js'
+import { Helmet } from 'react-helmet-async'
 
 export default function LoginPage() {
   const nav = useNavigate()
@@ -33,47 +34,53 @@ export default function LoginPage() {
   }
 
   return (
-    <section className={styles.section}>
-      <div className={`container ${styles.container}`}>
-        <div className={styles.card}>
-          <h1 className={styles.title}>Вход</h1>
-          <p className={styles.lead}>Только для администратора сайта.</p>
+    <>
+      <Helmet>
+        <title>Вход | School of Feelings</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <section className={styles.section}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.card}>
+            <h1 className={styles.title}>Вход</h1>
+            <p className={styles.lead}>Только для администратора сайта.</p>
 
-          <form className={styles.form} onSubmit={onSubmit}>
-            <label className={styles.field}>
-              <span>Email</span>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@email.com"
-                required
-              />
-            </label>
+            <form className={styles.form} onSubmit={onSubmit}>
+              <label className={styles.field}>
+                <span>Email</span>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@email.com"
+                  required
+                />
+              </label>
 
-            <label className={styles.field}>
-              <span>Пароль</span>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                required
-              />
-            </label>
+              <label className={styles.field}>
+                <span>Пароль</span>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                />
+              </label>
 
-            <button className={styles.btn} disabled={status === 'loading'}>
-              {status === 'loading' ? 'Вхожу…' : 'Войти'}
-            </button>
+              <button className={styles.btn} disabled={status === 'loading'}>
+                {status === 'loading' ? 'Вхожу…' : 'Войти'}
+              </button>
 
-            {status === 'error' && <div className={styles.err}>❌ {errorText}</div>}
-          </form>
+              {status === 'error' && <div className={styles.err}>❌ {errorText}</div>}
+            </form>
 
-          <div className={styles.back}>
-            <Link to="/articles">← На сайт</Link>
+            <div className={styles.back}>
+              <Link to="/articles">← На сайт</Link>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

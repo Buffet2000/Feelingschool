@@ -42,7 +42,7 @@ export default function App() {
           <Route path="editor/:id" element={<ArticleEditorPage />} />
         </Route>
 
-        {/* <Route path="*" element={<div style={{ padding: 24 }}>Страница не найдена</div>} /> */}
+        <Route path="*" element={<div style={{ padding: 24 }}>Страница не найдена</div>} />
       </Routes>
     </Layout>
   )

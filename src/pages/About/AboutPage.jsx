@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import HelpCards from '../../components/HelpCards/HelpCards.jsx'
 import WhenToAct from '../../components/WhenToAct/WhenToAct.jsx'
+import FAQ from '../../components/FAQ/Faq.jsx'
 
 export default function About() {
   return (
@@ -25,6 +26,7 @@ export default function About() {
       </Helmet>
       <HelpCards />
       <WhenToAct />
+      <FAQ />
       {/* <GroupProgram /> */}
       {/* <IndividualProgram /> */}
     </>

@@ -2,29 +2,39 @@
   position: fixed;
   inset: 0;
   z-index: 999;
+
   background: rgba(15, 20, 18, 0.45);
+
   display: grid;
   place-items: center;
+
   padding: 16px;
 }
 
 .modal {
   width: min(560px, 100%);
+  max-height: calc(100vh - 32px);
+
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.16);
+
   background: rgba(251, 251, 251, 0.92);
   backdrop-filter: blur(10px);
+
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+
+  overflow: auto;
 }
 
 .head {
   padding: 16px 18px;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .kicker {
@@ -45,11 +55,18 @@
 .close {
   border: none;
   background: transparent;
+
   font-size: 1.15rem;
   cursor: pointer;
+
   color: rgba(47, 79, 71, 0.75);
+
   padding: 6px 8px;
   border-radius: 10px;
+
+  transition:
+    color 0.14s ease,
+    background 0.14s ease;
 }
 
 .close:hover {
@@ -59,6 +76,7 @@
 
 .form {
   padding: 16px 18px 18px;
+
   display: grid;
   gap: 12px;
 }
@@ -75,41 +93,97 @@
 }
 
 .field input,
-.field select,
-.field textarea {
+.field textarea,
+.select {
   width: 100%;
-  padding: 11px 12px;
+
   border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  background-color: rgba(255, 255, 255, 0.9);
   color: #2f3b37;
+
+  font: inherit;
   outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.field input,
+.select {
+  height: 46px;
+}
+
+.field input {
+  padding: 0 12px;
 }
 
 .field textarea {
-  resize: vertical;
   min-height: 92px;
+  padding: 11px 12px;
+  resize: vertical;
+}
+
+.select {
+  padding: 0 44px 0 12px;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #3a7f6d 50%),
+    linear-gradient(135deg, #3a7f6d 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+}
+
+.select::-ms-expand {
+  display: none;
 }
 
 .field input:focus,
-.field select:focus,
-.field textarea:focus {
+.field textarea:focus,
+.select:focus {
   border-color: rgba(58, 127, 109, 0.45);
   box-shadow: 0 0 0 4px rgba(58, 127, 109, 0.12);
+  background-color: #fff;
 }
 
 .submit {
   margin-top: 4px;
+
   width: 100%;
+
   padding: 12px 16px;
+
   border-radius: 14px;
   border: none;
+
   background: #3a7f6d;
   color: #fff;
+
   font-weight: 900;
+
   cursor: pointer;
+
   box-shadow: 0 10px 22px rgba(58, 127, 109, 0.22);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease,
+    opacity 0.12s ease;
 }
 
 .submit:hover {
@@ -128,6 +202,7 @@
 .err {
   border-radius: 14px;
   padding: 10px 12px;
+
   font-weight: 800;
   font-size: 0.95rem;
 }
@@ -142,4 +217,40 @@
   background: rgba(200, 60, 60, 0.10);
   border: 1px solid rgba(200, 60, 60, 0.18);
   color: rgba(120, 25, 25, 0.95);
+}
+
+@media (max-width: 560px) {
+  .backdrop {
+    padding: 10px;
+  }
+
+  .modal {
+    border-radius: 20px;
+    max-height: calc(100vh - 20px);
+  }
+
+  .head {
+    padding: 15px 16px;
+  }
+
+  .form {
+    padding: 15px 16px 16px;
+  }
+
+  .title {
+    font-size: 1.06rem;
+  }
+
+  .field > span {
+    font-size: 0.9rem;
+  }
+
+  .field input,
+  .select {
+    height: 44px;
+  }
+
+  .field textarea {
+    min-height: 88px;
+  }
 }
